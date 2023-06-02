@@ -12,3 +12,7 @@ export interface PostsItem {
   postId: string
   authorId: string
 }
+
+// export interface NewPostItem{
+//   NewPostText: string
+// }

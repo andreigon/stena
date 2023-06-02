@@ -25,30 +25,28 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="author">
-  <div class="author-avatar">{{ avatar }}</div>
-  <div class="author-fullname">
-    <div class="author-fName">{{ fName }}</div>
-    <div class="author-sName">{{ sName }}</div>
+  <div class="author">
+    <div class="author-avatar">{{ avatar }}</div>
+    <div class="author-fullname">
+      <div class="author-fName">{{ fName }}</div>
+      <div class="author-sName">{{ sName }}</div>
+    </div>
+    <div class="author-id">{{ userId }}</div>
   </div>
-  <div class="author-id">{{ userId }}</div>
-</div>
-
-
 </template>
 
 <style scoped lang="scss">
-.author{
+.author {
   width: auto;
   display: flex;
   padding: 12px 24px;
   border-radius: 5px 5px;
   background-color: antiquewhite;
   // margin-bottom: 12px;
-  &-id{
+  &-id {
     background-color: rebeccapurple;
   }
-  &-avatar{
+  &-avatar {
     justify-content: center;
     align-items: center;
     padding: 25px 25px;
@@ -57,9 +55,9 @@ export default defineComponent({
     height: 50px;
     border-radius: 50%;
     background-color: rgb(233, 218, 15);
-    margin: auto 23px ;
+    margin: auto 23px;
   }
-  &-fullname{
+  &-fullname {
     // margin: auto 12px;
     height: 50px;
     width: 80px;
@@ -67,8 +65,6 @@ export default defineComponent({
     align-items: center;
     justify-content: center;
     padding: 25px 0;
-    
   }
 }
-
 </style>

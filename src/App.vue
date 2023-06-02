@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import PostComponent from '@/components/PostComponent/index.vue'
 import { AuthorItem, PostsItem } from '@/types/posts'
-
+import NewPost from './components/PostComponent/NewPost.vue'
 
 interface componentData {
   authors: Array<AuthorItem>
@@ -13,8 +13,8 @@ export default defineComponent({
   name: 'ComponentData',
 
   components: {
-    PostComponent
-
+    PostComponent,
+    NewPost
     //  your component
   },
   data(): componentData {
@@ -37,7 +37,7 @@ export default defineComponent({
       posts: [
         {
           text: 'Что такое TypeScript? \ TypeScript - это расширенная версия JavaScript. То есть он содержит в себе все то же самое, что и JavaScript, но с некоторыми дополнениями. Главная причина использовать TypeSciprt - это возможность добавить статическую типизацию к JavaScript. Тип переменной со статической типизацией не может быть изменен после ее объявления. Это может предотвратить БОЛЬШОЕ количество багов. С другой стороны, JavaScript - динамически типизированный язык, то есть типы переменных могуть изменяться.',
-          
+
           Image: 'poster.jpg',
           createdData: '18.05.2023',
           postId: '5',
@@ -65,6 +65,10 @@ export default defineComponent({
     getAuthor(authorId: string): AuthorItem {
       return this.authors.find((author) => author.userId === authorId)
     }
+
+    // AddNewPostText(NewPostText: string): {
+    //   return
+    // }
     // getPost(postId: string): PostsItem{
     //   return this.posts.find((post) => post.postId === pos)
     // }
@@ -81,8 +85,7 @@ export default defineComponent({
       :author="getAuthor(post.authorId)"
     />
   </div>
-
-
+  <NewPost {{NewPost}} />
 </template>
 
 <style scoped lang="scss"></style>
